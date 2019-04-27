@@ -7,8 +7,9 @@ test('removing stop words', t => {
 });
 
 test('handling contractions', t => {
-    const words = extract(`that's great!`);
+    const words = extract(`that's great! but don’t take to long okay?`);
     t.is(words[0].vocabulary, 'great');
+    t.is(words[1].vocabulary, 'long');
 });
 
 test('converting plural nouns to singular', t => {

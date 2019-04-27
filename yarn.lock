@@ -823,6 +823,13 @@ component-emitter@^1.2.1:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
+compromise@^11.13.2:
+  version "11.13.2"
+  resolved "https://registry.yarnpkg.com/compromise/-/compromise-11.13.2.tgz#19cf7d9814ca005548b7e470cf9025c9bb7b5524"
+  integrity sha512-E1zhtbVNapANcLVCktjm+GxZh+J3pE4epUXb6AgKRr1hYdM8AfUuV+sAS6M7Anuikq9q9HTMVttm1ignDLHt6A==
+  dependencies:
+    efrt-unpack "2.0.3"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -1035,6 +1042,11 @@ duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
+
+efrt-unpack@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/efrt-unpack/-/efrt-unpack-2.0.3.tgz#6ada57793e3dda16d182f6a371fbe3d135af9dc2"
+  integrity sha512-ocvMy2FUrwdO8mfbe8abpb9hEC8GqifH5/VONgb9aPNOTakRcJVTaLMBG6TBQ64Y7qEVABIkVA9jacdKJErE+g==
 
 emittery@^0.4.1:
   version "0.4.1"
@@ -3232,7 +3244,7 @@ wink-lemmatizer@^3.0.1:
     wink-lexicon "^2.0.1"
     wink-porter2-stemmer "^2.0.0"
 
-wink-lexicon@^2.0.1, wink-lexicon@^2.1.0:
+wink-lexicon@^2.0.1, wink-lexicon@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/wink-lexicon/-/wink-lexicon-2.1.1.tgz#2966ceceaabb343cae7803441384ad28ddfe9a72"
   integrity sha512-By1dTZdq0dhHNJlFHjwvOV9tWeijS7T119gt7/JA59W6uVdRdvZ7Yz10TrIbqt70A3ew1ywDvhYwCYc4VuJ7XA==
@@ -3243,13 +3255,13 @@ wink-porter2-stemmer@^2.0.0:
   integrity sha512-FWhpKShRnZvYWOWzbRs5r2IpfXOmYWkk0C5Fjj8nInBAH5mFtIRpla2mViM8iC0K3QreyMIARXSACf5xC8IAKg==
 
 wink-pos-tagger@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/wink-pos-tagger/-/wink-pos-tagger-2.2.1.tgz#caa1939e99707edfb460eede7fdbeb5080dd4294"
-  integrity sha512-wFAzapeJf342fX3wJ8WFFWBlLrqW7uUULJJC4HtJcKaNxiLLpPWCgp4ToNywt3TJCmad+vekrfVaGk9p8TaqWg==
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/wink-pos-tagger/-/wink-pos-tagger-2.2.2.tgz#bde4079ccf50a7967ce1548c9d4ec15435b24d7a"
+  integrity sha512-+bhkwqwwChqWR75ksFKVJZQagwu404UmnvFjxr+OWZ02/ZJAv19N/iqDpMeYRQRxatk5N+W9pXIKEDJsVrzGyw==
   dependencies:
     wink-helpers "^2.0.0"
     wink-lemmatizer "^3.0.1"
-    wink-lexicon "^2.1.0"
+    wink-lexicon "^2.1.1"
     wink-porter2-stemmer "^2.0.0"
     wink-tokenizer "^5.2.1"
 
