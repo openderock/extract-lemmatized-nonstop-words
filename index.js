@@ -1,5 +1,5 @@
 const tagger = require('wink-pos-tagger')();
-const stopwords = require('stopword/lib/stopwords_en');
+const stopwords = require('stopwords-json/dist/en');
 /**
  * Extracts a pure list of lemmatized words of a text filtered by stop words
  * @param {string} text
@@ -9,7 +9,7 @@ function extract(text) {
         return token.tag == 'word' &&
             token.normal.length > 1 &&
             /^[a-z]+$/.test(token.normal) &&
-            stopwords.words.indexOf(token.normal) == -1;
+            stopwords.indexOf(token.normal) == -1;
     }).map(token => {
         token.vocabulary = token.normal;
         switch (token.pos) {

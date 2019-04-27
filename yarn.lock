@@ -2876,10 +2876,10 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
-stopword@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/stopword/-/stopword-0.2.4.tgz#41d1d8a072926affc5d331d5caa1f91fd847143c"
-  integrity sha512-cPrTLrcUq10+N6i66xeFQKyEV5E9KGAxC9Omzl8oSX3Q8zp6Q/VPstU626u/S94E/vd02X5W4Vw21WQvGiMInw==
+stopwords-json@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/stopwords-json/-/stopwords-json-1.2.0.tgz#f0c033a4f72ddbfc6fe5da5f50b6208a0a9d7567"
+  integrity sha1-8MAzpPct2/xv5dpfULYgigqddWc=
 
 string-width@^1.0.1:
   version "1.0.2"
@@ -3233,9 +3233,9 @@ wink-lemmatizer@^3.0.1:
     wink-porter2-stemmer "^2.0.0"
 
 wink-lexicon@^2.0.1, wink-lexicon@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/wink-lexicon/-/wink-lexicon-2.1.0.tgz#15102513740ddbe11a4c8e818dbbce0f8d0721a9"
-  integrity sha512-kz9m9LqgPV80XGv64CPGRbwC3MQXYPjRlFJ4f6XGI1aSQ7R/7CO6PYBgnFdwZ0/n/lQe6+xmn27vkVxj7jICdA==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/wink-lexicon/-/wink-lexicon-2.1.1.tgz#2966ceceaabb343cae7803441384ad28ddfe9a72"
+  integrity sha512-By1dTZdq0dhHNJlFHjwvOV9tWeijS7T119gt7/JA59W6uVdRdvZ7Yz10TrIbqt70A3ew1ywDvhYwCYc4VuJ7XA==
 
 wink-porter2-stemmer@^2.0.0:
   version "2.0.0"
