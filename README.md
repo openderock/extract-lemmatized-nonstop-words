@@ -1,20 +1,20 @@
-# Extract lemmatized nonstop words
+# Extract stemmed nonstop words
 
-Extracts a pure list of lemmatized words of a text filtered by stop words
+Extracts a pure list of stemmed words of a text filtered by stop words
 
 ## Install
 install using Yarn:
 ```
-yarn add extract-lemmatized-nonstop-words
+yarn add extract-stemmed-nonstop-words
 ```
 install using NPM:
 ```
-npm i --save extract-lemmatized-nonstop-words
+npm i --save extract-stemmed-nonstop-words
 ```
 
 ## Usage
 ```javascript
-import extract from 'extract-lemmatized-nonstop-words';
+import extract from 'extract-stemmed-nonstop-words';
 
 const words = extract('He walked into the airport, past the banks of monitors.');
 ```

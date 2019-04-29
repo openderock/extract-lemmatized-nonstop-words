@@ -1,14 +1,12 @@
 const tagger = require('wink-pos-tagger')();
-const nlp = require('compromise');
+const preprocessor = require('text-preprocessor');
 const stopwords = require('stopwords-json/dist/en');
 /**
  * Extracts a pure list of lemmatized words of a text filtered by stop words
  * @param {string} text
  */
 function extract(text) {
-    const normalizedText = nlp(text).normalize({
-        numbers: false,
-    }).out();
+    const normalizedText = preprocessor(text).defaults().toString();
     // console.log(normalizedText);
     return tagger.tagSentence(normalizedText).filter(token => {
         return token.tag == 'word' &&
