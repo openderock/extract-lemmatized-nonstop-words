@@ -10,7 +10,7 @@ function extract(text) {
     // console.log(normalizedText);
     return tagger.tagSentence(normalizedText).filter(token => {
         return token.tag == 'word' &&
-            token.normal.length > 1 &&
+            token.normal.length > 2 &&
             /^[a-z]+$/.test(token.normal) &&
             stopwords.indexOf(token.normal) == -1;
     }).map(token => {
