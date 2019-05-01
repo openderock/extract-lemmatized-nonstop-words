@@ -19,6 +19,9 @@ const extract = require('extract-lemmatized-nonstop-words');
 const words = extract('He created these categories and they are better.');
 ```
 
+## API Documentation
+https://doxdox.org/openderock/extract-lemmatized-nonstop-words
+
 ## Annotation Specification
 
 Annotation | Name | Example

@@ -7,39 +7,42 @@ tagger.updateLexicon({
 });
 
 /**
- * Extracts a pure list of lemmatized words of a text filtered by stop words
- * @param {string} text
+ * Extracts a pure list of lemmatized words of a text filtered by stop words. it will remove non-word tokens, ones which their length is less than 3 and contains non-alphabetic charachters.
+ * 
+ * @param {String} text input text
+ * @param {String[]} filter list of custom stopword which will replace with defaults, in case of passing `false` filtering  results by stopwords will ignore.
+ * @typedef { { lemma:String } } Token
+ * @returns {Token[]}
  */
-function extract(text) {
+function extract(text, filter) {
     const normalizedText = preprocessor(text).defaults().toString();
     // console.log(normalizedText);
-    return tagger.tagSentence(normalizedText).filter(token => {
+    const tokens = tagger.tagSentence(normalizedText).filter(token => {
         return token.tag == 'word' &&
             token.normal.length > 2 &&
-            /^[a-z]+$/.test(token.normal) &&
-            stopwords.indexOf(token.normal) == -1;
+            /^[a-z]+$/.test(token.normal);
     }).map(token => {
-        token.stemm = token.normal;
+        token.vocabulary = token.normal;
         switch (token.pos) {
             // https://github.com/finnlp/en-pos#readme
             // 'cars' to 'car'
             case 'NNS':
             case 'NNPS':
                 if (token.normal.substr(-1, 1) == 's') {
-                    token.stemm = token.lemma;
+                    token.vocabulary = token.lemma;
                 }
                 break;
             // 'runs' to 'run'
             case 'VBZ':
             // 'running' to 'run'
             case 'VBG':
-                token.stemm = token.lemma;
+                token.vocabulary = token.lemma;
                 break;
             // 'wanted' to 'want'
             case 'VBD':
             case 'VBN':
                 if (token.normal.substr(-2, 2) == 'ed') {
-                    token.stemm = token.lemma;
+                    token.vocabulary = token.lemma;
                 }
                 break;
             default:
@@ -47,6 +50,7 @@ function extract(text) {
         }
         return token;
     });
+    return filter === false ? tokens.filter(item => (filter ? filter : stopwords).indexOf(token.vocabulary) == -1) : tokens;
 };
 
 module.exports = extract;
