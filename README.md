@@ -18,6 +18,31 @@ const extract = require('extract-lemmatized-nonstop-words');
 
 const words = extract('He created these categories and they are better.');
 ```
+returns:
+```
+Array (3 items)
+    0: Object
+        lemma: "create"
+        normal: "created"
+        pos: "VBD"
+        tag: "word"
+        value: "created"
+        vocabulary: "create"
+    1: Object
+        lemma: "category"
+        normal: "categories"
+        pos: "NNS"
+        tag: "word"
+        value: "categories"
+        vocabulary: "category"
+    2: Object
+        lemma: "good"
+        normal: "better"
+        pos: "JJR"
+        tag: "word"
+        value: "better"
+        vocabulary: "better"
+```
 
 ## API
 <a name="extract"></a>
