@@ -1,9 +1,9 @@
 {
-  "name": "extract-stemmed-nonstop-words",
+  "name": "extract-lemmatized-nonstop-words",
   "version": "1.0.3",
-  "description": "Extracts a pure list of stemmed words of a text filtered by stop words",
+  "description": "Extracts a pure list of lemmatized/stemmed words of a text filtered by stop words",
   "main": "index.js",
-  "repository": "https://github.com/openderock/extract-stemmed-nonstop-words",
+  "repository": "https://github.com/openderock/extract-lemmatized-nonstop-words",
   "author": "Sajjad Shirazy <shirazy.sajjad@gmail.com>",
   "license": "MIT",
   "scripts": {
