@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "stopword": "^0.2.4",
-    "stopwords-json": "^1.2.0",
     "text-preprocessor": "^1.0.0",
     "wink-pos-tagger": "^2.2.1"
   }
