@@ -11,8 +11,7 @@ tagger.updateLexicon({
  * 
  * @param {String} text input text
  * @param {String[]} filter list of custom stopword which will replace with defaults, in case of passing `false` filtering  results by stopwords will ignore.
- * @typedef { { lemma:String } } Token
- * @returns {Token[]}
+ * @returns {Object[]}
  */
 function extract(text, filter) {
     const normalizedText = preprocessor(text).defaults().toString();
@@ -50,7 +49,7 @@ function extract(text, filter) {
         }
         return token;
     });
-    return filter === false ? tokens.filter(item => (filter ? filter : stopwords).indexOf(token.vocabulary) == -1) : tokens;
+    return filter === false ? tokens : tokens.filter(token => (filter ? filter : stopwords).indexOf(token.vocabulary) == -1);
 };
 
 module.exports = extract;

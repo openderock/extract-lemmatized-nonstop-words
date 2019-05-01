@@ -19,8 +19,16 @@ const extract = require('extract-lemmatized-nonstop-words');
 const words = extract('He created these categories and they are better.');
 ```
 
-## API Documentation
-https://doxdox.org/openderock/extract-lemmatized-nonstop-words
+## API
+<a name="extract"></a>
+
+### extract(text, filter) ⇒ <code>Array.&lt;Object&gt;</code>
+Extracts a pure list of lemmatized words of a text filtered by stop words. it will remove non-word tokens, ones which their length is less than 3 and contains non-alphabetic charachters.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| text | <code>String</code> | input text |
+| filter | <code>Array.&lt;String&gt;</code> | list of custom stopword which will replace with defaults, in case of passing `false` filtering  results by stopwords will ignore. |
 
 ## Annotation Specification
 
