@@ -2,7 +2,7 @@ const tagger = require('wink-pos-tagger')();
 const preprocessor = require('text-preprocessor');
 const stopwords = require('stopwords-json/dist/en');
 
-tegger.updateLexicon({
+tagger.updateLexicon({
     ooh: ['UH']
 });
 

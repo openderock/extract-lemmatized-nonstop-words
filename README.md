@@ -14,9 +14,9 @@ npm i --save extract-lemmatized-nonstop-words
 
 ## Usage
 ```javascript
-import extract from 'extract-lemmatized-nonstop-words';
+const extract = require('extract-lemmatized-nonstop-words');
 
-const words = extract('He walked into the airport, past the banks of monitors.');
+const words = extract('He created these categories and they are better.');
 ```
 
 ## Annotation Specification
