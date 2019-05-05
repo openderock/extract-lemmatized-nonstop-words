@@ -1,6 +1,6 @@
 # Extract lemmatized nonstop words
 
-Extracts a pure list of lemmatized words of a text filtered by stop words (usingg [this](https://github.com/fergiemcdowall/stopword) list).
+Extracts a pure list of lemmatized words of a text filtered by stop words.
 
 ## Install
 install using Yarn:

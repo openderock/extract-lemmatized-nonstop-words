@@ -1,6 +1,6 @@
 const tagger = require('wink-pos-tagger')();
 const preprocessor = require('text-preprocessor');
-const stopwords = require('stopword').en;
+const stopwords = require('./stopwords/en');
 
 tagger.updateLexicon({
     ooh: ['UH']
