@@ -7,5 +7,5 @@ module.exports = [
     `she`, `should`, `so`, `than`, `that`, `the`, `their`, `them`, `then`, `there`, `these`, `they`, `this`, `those`, `to`,
     `was`, `we`, `were`, `would`,
     `you`, `your`,
-    'here', 'okay', 'ok'
+    'here', 'okay', 'ok', 'can',
 ]
