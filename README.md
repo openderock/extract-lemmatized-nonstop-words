@@ -2,6 +2,14 @@
 
 Extracts a pure list of lemmatized words of a text filtered by stop words.
 
+## Features
+* Removing stopwords.
+* Removing proper noun.
+* Regular past tense verb and past participle verb to present form: `created` to `create`
+* Present form (3rd person) to present form: `creates` to `create`
+* Plural noun to singular: `cats` to `cat`
+* Gerund form verb to present form: `creating` to `create`
+
 ## Install
 install using Yarn:
 ```
