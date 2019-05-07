@@ -1,5 +1,6 @@
 import test from 'ava';
 import extract from './index.js';
+import { text } from 'wink-lexicon/src/lexicon';
 
 test('removing stop words', t => {
     const words = extract(`that is great!`);
@@ -26,9 +27,18 @@ test('handling present form (3rd person) of verbs', t => {
 test('handling gerund form of verbs', t => {
     const words = extract(`he is running!`);
     t.is(words[0].vocabulary, 'run');
+    t.is(extract(`hunting`)[0].vocabulary, 'hunt');
 });
 
 test('handling regular past tense of verbs', t => {
     const words = extract(`he created this thing!`);
     t.is(words[0].vocabulary, 'create');
+    t.is(extract(`limited`)[0].vocabulary, 'limit');
+    t.is(extract(`interested`)[0].vocabulary, 'interest');
+    t.is(extract(`proceed`)[0].vocabulary, 'proceed');
+    t.is(extract(`sacred`)[0].vocabulary, 'sacred');
+    t.is(extract(`preferred`)[0].vocabulary, 'prefer');
+    t.is(extract(`colored`)[0].vocabulary, 'color');
+    t.is(extract(`beloved`)[0].vocabulary, 'beloved');
+    t.is(extract(`sophisticated`)[0].vocabulary, 'sophisticate');
 });

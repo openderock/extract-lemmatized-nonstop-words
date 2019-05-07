@@ -1,4 +1,5 @@
 const tagger = require('wink-pos-tagger')();
+const lemmatize = require("wink-lemmatizer")
 const preprocessor = require('text-preprocessor');
 const stopwords = require('./stopwords/en');
 
@@ -21,6 +22,10 @@ function extract(text, filter) {
             token.normal.length > 2 &&
             /^[a-z]+$/.test(token.normal);
     }).map(token => {
+        if (token.pos != 'VBG' && /ing$/.test(token.normal)) {
+            token.pos = 'VBG';
+            token.lemma = lemmatize.verb(token.normal);
+        }
         token.vocabulary = token.normal;
         switch (token.pos) {
             // https://github.com/finnlp/en-pos#readme
@@ -42,6 +47,12 @@ function extract(text, filter) {
             case 'VBN':
                 if (token.normal.substr(-2, 2) == 'ed') {
                     token.vocabulary = token.lemma;
+                }
+                break;
+            // 'limited' to 'limit'
+            case 'JJ':
+                if (token.normal.substr(-2, 2) == 'ed') {
+                    token.vocabulary = lemmatize.verb(token.normal);
                 }
                 break;
             default:
