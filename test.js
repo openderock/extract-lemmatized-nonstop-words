@@ -1,6 +1,5 @@
 import test from 'ava';
 import extract from './index.js';
-import { text } from 'wink-lexicon/src/lexicon';
 
 test('removing stop words', t => {
     const words = extract(`that is great!`);
@@ -25,8 +24,9 @@ test('handling present form (3rd person) of verbs', t => {
 });
 
 test('handling gerund form of verbs', t => {
-    const words = extract(`he is running!`);
+    const words = extract(`he is running! i'm gonna scape ...`);
     t.is(words[0].vocabulary, 'run');
+    t.is(words[1].vocabulary, 'go');
     t.is(extract(`hunting`)[0].vocabulary, 'hunt');
 });
 

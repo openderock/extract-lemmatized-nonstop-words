@@ -3003,10 +3003,10 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-text-preprocessor@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/text-preprocessor/-/text-preprocessor-1.0.0.tgz#5085e85ddccb35a71bad1fb46bbd84f15270d8f7"
-  integrity sha512-aDkvkDpezoD9SGJZCe+6DJlrRyK26A+yPHrTp+Zc6D8HnqQbTTz9zkbQHvPAGTDAuUrjKp/mw8Bixvd8UBmTmg==
+text-preprocessor@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/text-preprocessor/-/text-preprocessor-1.0.2.tgz#fbf698ffb85143b9d662372f15b38cfa6b23e6ab"
+  integrity sha512-2DJr+HSpZMEPwG5pYwnejtX5fD+IemsPCeSLR7UpsQ30/TuT/S8WJljpZexfpZa8fxEEoFGak1Edj2r0QsXd5w==
   dependencies:
     lodash "^4.17.11"
 

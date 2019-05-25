@@ -15,7 +15,7 @@ tagger.updateLexicon({
  * @returns {Object[]}
  */
 function extract(text, filter) {
-    const normalizedText = preprocessor(text).defaults().toString();
+    const normalizedText = preprocessor(text).defaults().expandContractions().toString();
     // console.log(normalizedText);
     const tokens = tagger.tagSentence(normalizedText).filter(token => {
         return token.tag == 'word' &&
@@ -41,6 +41,9 @@ function extract(text, filter) {
             // 'running' to 'run'
             case 'VBG':
                 token.vocabulary = token.lemma;
+                if (/ing$/.test(token.vocabulary)) {
+                    token.vocabulary = token.vocabulary.slice(0, -3);
+                }
                 break;
             // 'wanted' to 'want'
             case 'VBD':
