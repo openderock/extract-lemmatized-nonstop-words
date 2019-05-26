@@ -35,6 +35,9 @@ function extract(text, filter) {
                 if (token.normal.substr(-1, 1) == 's') {
                     token.vocabulary = token.lemma;
                 }
+                if (token.vocabulary.substr(-3, 3) == 'ies') {
+                    token.vocabulary = token.vocabulary.slice(0, -3) + 'y';
+                }
                 break;
             // 'runs' to 'run'
             case 'VBZ':

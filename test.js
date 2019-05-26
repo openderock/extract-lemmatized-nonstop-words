@@ -15,7 +15,8 @@ test('handling contractions', t => {
 test('converting plural nouns to singular', t => {
     const words = extract(`it's his pens and here are my categories.`);
     t.is(words[0].vocabulary, 'pen');
-    t.is(words[1].vocabulary, 'category');
+    t.is(words[1].vocabulary, 'category'); 
+    t.is(extract(`hearties`)[0].vocabulary, 'hearty');
 });
 
 test('handling present form (3rd person) of verbs', t => {
