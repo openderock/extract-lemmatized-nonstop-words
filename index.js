@@ -41,6 +41,11 @@ function extract(text, filter) {
                 break;
             // 'runs' to 'run'
             case 'VBZ':
+                token.vocabulary = token.lemma;
+                if (token.vocabulary.substr(-3, 3) == 'ies') {
+                    token.vocabulary = token.vocabulary.slice(0, -3) + 'y';
+                }
+                break;
             // 'running' to 'run'
             case 'VBG':
                 token.vocabulary = token.lemma;
