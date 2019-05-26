@@ -25,10 +25,12 @@ test('handling present form (3rd person) of verbs', t => {
 });
 
 test('handling gerund form of verbs', t => {
-    const words = extract(`he is running! i'm gonna scape ...`);
+    const words = extract(`he is running! i'm gonna scape.`);
     t.is(words[0].vocabulary, 'run');
     t.is(words[1].vocabulary, 'go');
-    t.is(extract(`hunting`)[0].vocabulary, 'hunt');
+    t.is(extract(`hunting`)[0].vocabulary, 'hunting');
+    t.is(extract(`bring`)[0].vocabulary, 'bring');
+    t.is(extract(`wing`)[0].vocabulary, 'wing');
 });
 
 test('handling regular past tense of verbs', t => {

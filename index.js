@@ -22,10 +22,10 @@ function extract(text, filter) {
             token.normal.length > 2 &&
             /^[a-z]+$/.test(token.normal);
     }).map(token => {
-        if (token.pos != 'VBG' && /ing$/.test(token.normal)) {
-            token.pos = 'VBG';
-            token.lemma = lemmatize.verb(token.normal);
-        }
+        // if (token.pos === 'NN' && /ing$/.test(token.normal) && token.lemma.length >= 6) {
+        //     token.pos = 'VBG';
+        //     token.lemma = lemmatize.verb(token.normal);
+        // }
         token.vocabulary = token.normal;
         switch (token.pos) {
             // https://github.com/finnlp/en-pos#readme
