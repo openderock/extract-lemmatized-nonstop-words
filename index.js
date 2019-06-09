@@ -17,7 +17,7 @@ tagger.updateLexicon({
 function extract(text, filter) {
     const normalizedText = preprocessor(text)
         .defaults()
-        .removeURLs()
+        // .removeURLs()
         .expandContractions()
         .toString();
     // console.log(normalizedText);
