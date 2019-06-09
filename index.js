@@ -15,7 +15,11 @@ tagger.updateLexicon({
  * @returns {Object[]}
  */
 function extract(text, filter) {
-    const normalizedText = preprocessor(text).defaults().expandContractions().toString();
+    const normalizedText = preprocessor(text)
+        .defaults()
+        .removeURLs()
+        .expandContractions()
+        .toString();
     // console.log(normalizedText);
     const tokens = tagger.tagSentence(normalizedText).filter(token => {
         return token.tag == 'word' &&

@@ -1,6 +1,6 @@
 {
   "name": "extract-lemmatized-nonstop-words",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Extracts a pure list of lemmatized words of a text filtered by stop words",
   "main": "index.js",
   "repository": "https://github.com/openderock/extract-lemmatized-nonstop-words",
@@ -13,7 +13,7 @@
     "ava": "^1.4.1"
   },
   "dependencies": {
-    "text-preprocessor": "^1.0.2",
+    "text-preprocessor": "^1.1.1",
     "wink-lemmatizer": "^3.0.1",
     "wink-pos-tagger": "^2.2.1"
   }

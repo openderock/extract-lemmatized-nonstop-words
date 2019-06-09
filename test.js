@@ -1,6 +1,13 @@
 import test from 'ava';
 import extract from './index.js';
 
+test('text preprocessing', t => {
+    const words = extract(`that is an email shirazy.sajjad@gmail.com and this is a url: [github.com].`);
+    t.is(words.length, 2);
+    t.is(words[0].vocabulary, 'email');
+    t.is(words[1].vocabulary, 'url');
+});
+
 test('removing stop words', t => {
     const words = extract(`that is great!`);
     t.is(words[0].vocabulary, 'great');
